@@ -1,0 +1,1057 @@
+DBN([93, 450, 450, 9],
+    learn_rates=0.1, learn_rates_pretrain=0.11,
+    learn_rate_decays=0.55, momentum=0.9,
+    epochs=15, verbose=1) ([0.4853095252519668, 0.49239830018810182, 0.48142458986232234], 0.48637747176746365)
+
+DBN([93, 500, 500, 9],
+    learn_rates=0.1, learn_rates_pretrain=0.11,
+    learn_rate_decays=0.55, momentum=0.9,
+    epochs=15, verbose=1) ([0.48521054201889013, 0.48749540117467838, 0.47787514600759073], 0.48352702973371975)
+
+([0.47594124929707016, 0.50616514087348297, 0.47047753507721529], 0.48419464174925614)
+
+DBN([93, 650, 650, 9],
+    learn_rates=0.1, learn_rates_pretrain=0.11,
+    learn_rate_decays=0.53, momentum=0.905,
+    epochs=15, verbose=1)
+([0.47357288738006204, 0.50670290565945297, 0.47442765417389171], 0.48490114907113552)
+
+DBN([93, 600, 600, 9],
+    learn_rates=0.098, learn_rates_pretrain=0.115,
+    learn_rate_decays=0.52, momentum=0.9,
+    epochs=15, verbose=1)
+([0.47368765493582843, 0.50367191067414152, 0.47568955190313966], 0.48434970583770315)
+
+LASAGNA1 – learn_r = 0.1
+    mom_r = 0.9
+    learn_dec = 0.65
+    mom_max = 0.999
+    clf = NeuralNet(layers=layers0,
+                    input_shape=(None, 93),
+                    dense0_num_units=600,
+                    dropout0_p=0.23,
+                    dense1_num_units=1200,
+                    dropout1_p=0.23,
+                    dense2_num_units=600,
+                    output_num_units=9,
+                    output_nonlinearity=softmax,
+                    update=nesterov_momentum,
+                    update_learning_rate=theano.shared(float32(learn_r)),
+                    update_momentum=theano.shared(float32(mom_r)),
+                    on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                      AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                    eval_size=0.2,
+                    verbose=1,
+                    max_epochs=15) ~0.482
+
+LASAGNA2 learn_r = 0.1
+mom_r = 0.9
+learn_dec = 0.65
+mom_max = 0.999
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=600,
+                dropout0_p=0.24,
+                dense1_num_units=1100,
+                dropout1_p=0.24,
+                dense2_num_units=600,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=12) ([0.47069297882096467, 0.50268035414289891, 0.47159101370408391], 0.48165478222264918)
+                ([0.47830818550955778, 0.50469378918303731, 0.47448765272550347], 0.48582987580603287)
+
+
+LASAGNA3
+--------
+learn_r = 0.1
+mom_r = 0.9
+learn_dec = 0.65
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=900,
+                dropout0_p=0.26,
+                dense1_num_units=1300,
+                dropout1_p=0.23,
+                dense2_num_units=600,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=14)
+
+([0.47139249208866124, 0.50024285158318027, 0.46938725128379244], 0.48034086498521128)
+
+
+LASAGNA4
+--------
+learn_r = 0.1
+    mom_r = 0.9
+    learn_dec = 0.64
+    mom_max = 0.95
+    clf = NeuralNet(layers=layers0,
+                    input_shape=(None, 93),
+                    dense0_num_units=700,
+                    dropout0_p=0.2,
+                    dense1_num_units=800,
+                    dropout1_p=0.23,
+                    dense2_num_units=800,
+                    dropout2_p=0.2,
+                    dense3_num_units=700,
+                    output_num_units=9,
+                    output_nonlinearity=softmax,
+                    update=nesterov_momentum,
+                    update_learning_rate=theano.shared(float32(learn_r)),
+                    update_momentum=theano.shared(float32(mom_r)),
+                    on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                      AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                    eval_size=0.05,
+                    verbose=1,
+                    max_epochs=20)
+([0.47579402465741194, 0.50225235544063607, 0.47360316892544696], 0.48388318300783162)
+
+LASAGNA4_2
+----------
+learn_r = 0.1
+mom_r = 0.9
+learn_dec = 0.64
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=700,
+                dropout0_p=0.21,
+                dense1_num_units=1200,
+                dropout1_p=0.32,
+                dense2_num_units=1200,
+                dropout2_p=0.21,
+                dense3_num_units=700,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.02,
+                verbose=1,
+                max_epochs=20)
+                
+([0.47419515379403543, 0.49980796323934812, 0.47190691095355164], 0.48197000932897843)
+
+LASAGNA4_tmp1
+-------------
+learn_r = 0.1
+mom_r = 0.9
+learn_dec = 0.64
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=900,
+                dropout0_p=0.24,
+                dense1_num_units=1500,
+                dropout1_p=0.35,
+                dense2_num_units=1500,
+                dropout2_p=0.24,
+                dense3_num_units=900,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.02,
+                verbose=1,
+                max_epochs=15)
+
+LASAGNA4_tmp2
+-------------
+learn_r = 0.1
+mom_r = 0.9
+learn_dec = 0.63
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=1200,
+                dropout0_p=0.32,
+                dense1_num_units=1800,
+                dropout1_p=0.4,
+                dense2_num_units=1800,
+                dropout2_p=0.32,
+                dense3_num_units=1200,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.02,
+                verbose=1,
+                max_epochs=15)
+
+LASAGNA4_tmp3
+-------------
+learn_r = 0.1
+mom_r = 0.9
+learn_dec = 0.63
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=1000,
+                dropout0_p=0.25,
+                dense1_num_units=1400,
+                dropout1_p=0.3,
+                dense2_num_units=1400,
+                dropout2_p=0.25,
+                dense3_num_units=1000,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.02,
+                verbose=1,
+                max_epochs=15)
+
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.1
+mom_r = 0.9
+learn_dec = 0.65
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=1400,
+                dropout0_p=0.2,
+                dense1_num_units=1400,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.02,
+                verbose=1,
+                max_epochs=15)
+
+
+
+GARFIELD_1 | nn_garf1_ | ([0.46910649802702148, 0.49758304765585154, 0.4665122455583296], 0.47773393041373424)
+----------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.1
+mom_r = 0.9
+learn_dec = 0.65
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=1400,
+                dropout0_p=0.2,
+                dense1_num_units=1400,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.02,
+                verbose=1,
+                max_epochs=15)
+
+LONGKATZEN_UNO - 0.4741
+--------------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dense2', DenseLayer),
+           ('output', DenseLayer)]
+
+learn_r = 0.14
+mom_r = 0.85
+learn_dec = 0.61
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=1000,
+                dropout0_p=0.2,
+                dense1_num_units=700,
+                dense2_num_units=600,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=18)
+
+LONGKATZEN_DUO – 0.4729
+--------------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dense2', DenseLayer),
+           ('output', DenseLayer)]
+           
+learn_r = 0.09
+mom_r = 0.85
+learn_dec = 0.69
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=1100,
+                dropout0_p=0.22,
+                dense1_num_units=800,
+                dense2_num_units=600,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=18)
+
+LONGKATZEN_TRI – ([0.47064943765880257, 0.4999516706806944, 0.4692684610748214], 0.47995652313810616)
+--------------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dense2', DenseLayer),
+           ('output', DenseLayer)]
+
+learn_r = 0.12
+mom_r = 0.85
+learn_dec = 0.64
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=1300,
+                dropout0_p=0.25,
+                dense1_num_units=1000,
+                dense2_num_units=800,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=15)
+
+LONGKATZEN_444
+--------------
+learn_r = 0.12
+mom_r = 0.84
+learn_dec = 0.65
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=180),
+                batch_iterator_test=BatchIterator(batch_size=180),
+                input_shape=(None, 93),
+                dense0_num_units=1300,
+                dropout0_p=0.25,
+                dense1_num_units=1000,
+                dense2_num_units=800,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=17)
+
+
+LONGKATZEN_555
+--------------
+learn_r = 0.11
+mom_r = 0.85
+learn_dec = 0.64
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=100),
+                batch_iterator_test=BatchIterator(batch_size=100),
+                input_shape=(None, 93),
+                dense0_num_units=1300,
+                dropout0_p=0.25,
+                dense1_num_units=1000,
+                dense2_num_units=800,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=17)
+
+GARFIELD_2
+----------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.12
+mom_r = 0.85
+learn_dec = 0.65
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                batch_iterator_train=BatchIterator(batch_size=100),
+                batch_iterator_test=BatchIterator(batch_size=100),
+                dense0_num_units=1400,
+                dropout0_p=0.2,
+                dense1_num_units=1400,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.02,
+                verbose=1,
+                max_epochs=15)
+
+LONGKATZEN_666
+--------------
+learn_r = 0.11
+mom_r = 0.87
+learn_dec = 0.64
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=100),
+                batch_iterator_test=BatchIterator(batch_size=100),
+                input_shape=(None, 93),
+                dense0_num_units=1600,
+                dropout0_p=0.25,
+                dense1_num_units=1200,
+                dense2_num_units=900,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=17)
+
+LASAGNA5
+--------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense2', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.11
+mom_r = 0.85
+learn_dec = 0.66
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=100),
+                batch_iterator_test=BatchIterator(batch_size=100),
+                input_shape=(None, 93),
+                dense0_num_units=1000,
+                dropout0_p=0.26,
+                dense1_num_units=1400,
+                dropout1_p=0.23,
+                dense2_num_units=700,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=14)
+
+LASAGNA6
+--------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense2', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.15
+mom_r = 0.7
+learn_dec = 0.62
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=100),
+                batch_iterator_test=BatchIterator(batch_size=100),
+                input_shape=(None, 93),
+                dense0_num_units=1000,
+                dropout0_p=0.26,
+                dense1_num_units=1500,
+                dropout1_p=0.23,
+                dense2_num_units=700,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=14)
+
+
+LASAGNA7
+--------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense2', DenseLayer),
+           ('output', DenseLayer)]
+
+learn_r = 0.1
+mom_r = 0.91
+learn_dec = 0.64
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=100),
+                batch_iterator_test=BatchIterator(batch_size=100),
+                input_shape=(None, 93),
+                dense0_num_units=1200,
+                dropout0_p=0.3,
+                dense1_num_units=1600,
+                dropout1_p=0.21,
+                dense2_num_units=600,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=15)
+
+LASAGNA8
+--------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense2', DenseLayer),
+           ('output', DenseLayer)]
+
+learn_r = 0.11
+mom_r = 0.88
+learn_dec = 0.66
+mom_max = 0.97
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=110),
+                batch_iterator_test=BatchIterator(batch_size=110),
+                input_shape=(None, 93),
+                dense0_num_units=1200,
+                dropout0_p=0.32,
+                dense1_num_units=1600,
+                dropout1_p=0.21,
+                dense2_num_units=800,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=17)
+
+LASAGNA9
+--------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense2', DenseLayer),
+           ('output', DenseLayer)]
+
+learn_r = 0.11
+mom_r = 0.88
+learn_dec = 0.64
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=110),
+                batch_iterator_test=BatchIterator(batch_size=110),
+                input_shape=(None, 93),
+                dense0_num_units=1600,
+                dropout0_p=0.35,
+                dense1_num_units=1800,
+                dropout1_p=0.24,
+                dense2_num_units=1100,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=17)
+
+LASAGNA10
+---------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense2', DenseLayer),
+           ('output', DenseLayer)]
+
+learn_r = 0.1
+mom_r = 0.9
+learn_dec = 0.65
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=1000,
+                dropout0_p=0.26,
+                dense1_num_units=1300,
+                dropout1_p=0.21,
+                dense2_num_units=700,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariableLin('update_learning_rate', start=learn_r, stop=0.0002),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=20)
+
+SIAMGARFIELD_1
+--------------
+0.5 * 2 nets on 90% percent of set
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.11
+mom_r = 0.88
+learn_dec = 0.64
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=1500,
+                dropout0_p=0.2,
+                dense1_num_units=1500,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.02,
+                verbose=1,
+                max_epochs=15)
+
+GARFIELD_3
+----------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dense1', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('output', DenseLayer)]
+learn_r = 0.14
+mom_r = 0.85
+learn_dec = 0.61
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=1400,
+                dense1_num_units=1400,
+                dropout0_p=0.1,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.02,
+                verbose=1,
+                max_epochs=16)
+
+FATGARFIELD_1
+-------------
+0.5 * (sum)
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.1
+mom_r = 0.9
+learn_dec = 0.65
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=1400,
+                dropout0_p=0.2,
+                dense1_num_units=1400,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.02,
+                verbose=1,
+                max_epochs=15)
+
+layers1 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dense1', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('output', DenseLayer)]
+learn_r = 0.12
+mom_r = 0.87
+learn_dec = 0.63
+mom_max = 0.95
+clf2 = NeuralNet(layers=layers1,
+                input_shape=(None, 93),
+                dense0_num_units=1600,
+                dense1_num_units=1600,
+                dropout0_p=0.15,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.02,
+                verbose=1,
+                max_epochs=16)
+
+LONGKATZEN_777
+--------------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dense1', DenseLayer),
+           ('dense2', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('output', DenseLayer)]
+
+learn_r = 0.1
+mom_r = 0.85
+learn_dec = 0.68
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dense0_num_units=1000,
+                dense1_num_units=900,
+                dense2_num_units=700,
+                dropout0_p=0.15,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=15)
+
+LASAGNA11
+---------
+layers0 = [('input', InputLayer),
+           ('dense0', DenseLayer),
+           ('dropout0', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense2', DenseLayer),
+           ('output', DenseLayer)]
+
+learn_r = 0.1
+mom_r = 0.88
+learn_dec = 0.64
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=110),
+                batch_iterator_test=BatchIterator(batch_size=110),
+                input_shape=(None, 93),
+                dense0_num_units=1500,
+                dropout0_p=0.3,
+                dense1_num_units=1400,
+                dropout1_p=0.3,
+                dense2_num_units=800,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=14)
+
+KITTY1 0.46822
+------
+layers0 = [('input', InputLayer),
+           ('dropout0', DropoutLayer),
+           ('dense0', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dense2', DenseLayer),
+           ('dense3', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.11
+mom_r = 0.88
+learn_dec = 0.71
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dropout0_p=0.17,
+                dense0_num_units=1000,
+                dropout1_p=0.08,
+                dense1_num_units=1000,
+                dense2_num_units=700,
+                dense3_num_units=700,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=20)
+
+KITTY2
+------
+layers0 = [('input', InputLayer),
+           ('dropout0', DropoutLayer),
+           ('dense0', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dense2', DenseLayer),
+           ('dense3', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.11
+mom_r = 0.88
+learn_dec = 0.71
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                input_shape=(None, 93),
+                dropout0_p=0.18,
+                dense0_num_units=1000,
+                dropout1_p=0.1,
+                dense1_num_units=1000,
+                dense2_num_units=800,
+                dense3_num_units=900,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=20)
+
+KITTY3
+------
+layers0 = [('input', InputLayer),
+           ('dropout0', DropoutLayer),
+           ('dense0', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dense2', DenseLayer),
+           ('dense3', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.115
+mom_r = 0.88
+learn_dec = 0.71
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=100),
+                batch_iterator_test=BatchIterator(batch_size=100),
+                input_shape=(None, 93),
+                dropout0_p=0.18,
+                dense0_num_units=1000,
+                dropout1_p=0.09,
+                dense1_num_units=1000,
+                dense2_num_units=900,
+                dense3_num_units=900,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=20)
+
+KITTY4
+------
+layers0 = [('input', InputLayer),
+           ('dropout0', DropoutLayer),
+           ('dense0', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dense2', DenseLayer),
+           ('dense3', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.115
+mom_r = 0.88
+learn_dec = 0.71
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=100),
+                batch_iterator_test=BatchIterator(batch_size=100),
+                input_shape=(None, 93),
+                dropout0_p=0.22,
+                dense0_num_units=1200,
+                dropout1_p=0.11,
+                dense1_num_units=1200,
+                dense2_num_units=1000,
+                dense3_num_units=900,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=20)
+
+KITTY5
+------
+layers0 = [('input', InputLayer),
+           ('dropout0', DropoutLayer),
+           ('dense0', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dense2', DenseLayer),
+           ('dense3', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.115
+mom_r = 0.88
+learn_dec = 0.71
+mom_max = 0.95
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=100),
+                batch_iterator_test=BatchIterator(batch_size=100),
+                input_shape=(None, 93),
+                dropout0_p=0.25,
+                dense0_num_units=1500,
+                dropout1_p=0.13,
+                dense1_num_units=1300,
+                dense2_num_units=1000,
+                dense3_num_units=1000,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=20)
+
+KITTY6
+------
+layers0 = [('input', InputLayer),
+           ('dropout0', DropoutLayer),
+           ('dense0', DenseLayer),
+           ('dropout1', DropoutLayer),
+           ('dense1', DenseLayer),
+           ('dense2', DenseLayer),
+           ('dense3', DenseLayer),
+           ('output', DenseLayer)]
+learn_r = 0.12
+mom_r = 0.87
+learn_dec = 0.71
+mom_max = 0.99
+clf = NeuralNet(layers=layers0,
+                batch_iterator_train=BatchIterator(batch_size=100),
+                batch_iterator_test=BatchIterator(batch_size=100),
+                input_shape=(None, 93),
+                dropout0_p=0.22,
+                dense0_num_units=1200,
+                dropout1_p=0.12,
+                dense1_num_units=1200,
+                dense2_num_units=1100,
+                dense3_num_units=900,
+                output_num_units=9,
+                output_nonlinearity=softmax,
+                update=nesterov_momentum,
+                update_learning_rate=theano.shared(float32(learn_r)),
+                update_momentum=theano.shared(float32(mom_r)),
+                on_epoch_finished=[AdjustVariable('update_learning_rate', start=learn_r, decay_rate=learn_dec),
+                                  AdjustVariableLin('update_momentum', start=mom_r, stop=mom_max),],
+                eval_size=0.05,
+                verbose=1,
+                max_epochs=20)
