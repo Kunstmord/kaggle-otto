@@ -1,0 +1,148 @@
+0.08 * KATZ_S1 + 0.17 * LAS_S1 + 0.1 * CB RF(0.47096) + 0.11 * GB(0.46114) + 0.06 * XGB(0.44231) + 0.08 * KITTY_S1 + 0.4 * XGB(0.43306) 0.42140
+0.03 * DBN_S1 + 0.07 * KATZ_S1 + 0.16 * LAS_S1 + 0.1 * CB RF(0.47096) + 0.1 * GB(0.46114) + 0.06 * XGB(0.44231) + 0.08 * KITTY_S1 + 0.4 * XGB(0.43306) 0.42144
+0.04 * GARF_S1 + 0.07 * KATZ_S1 + 0.16 * LAS_S1 + 0.1 * CB RF(0.47096) + 0.1 * GB(0.46114) + 0.06 * XGB(0.44231) + 0.08 * KITTY_S1 + 0.39 * XGB(0.43306) 0.42150
+0.07 * GARF_S1 (0.46414) + 0.17 * KATZ_S1(0.46282) + 0.06 * LAS_S1 3(0.46154) + 0.1 * CB RF(0.47096) + 0.03 * DBN_S1(0.5 * 0.47606 + 0.5 * 0.47954) + 0.1 * GB(0.46114) + 0.07 * XGB(0.44231) + 0.4 * XGB(0.43306) 0.42193
+0.06 * GARFIELD_1 (0.46976) + 0.16 * LONGKATZEN_TRI(0.42705) + 0.05 * NN LASAGNA 3(0.47092) + 0.12 * CB RF(0.47096) + 0.03 * NN DBN(0.47606) + 0.1 * GB(0.46114) + 0.07 * XGB(0.44231) + 0.41 * XGB(0.43306) 0.42224
+0.14 * GARFIELD_1 (0.46976) + 0.11 * NN LASAGNA 3(0.47092) + 0.11 * CB RF(0.47096) + 0.06 * NN DBN(0.47606) + 0.14 * GB(0.46114) + 0.12 * XGB(0.44231) + 0.32 * XGB(0.43473) 0.42359
+0.15 * GARFIELD_1 (0.46976) + 0.03 * GB(0.46242) + 0.12 * NN LASAGNA 3(0.47092) + 0.14 * CB RF(0.47096) + 0.16 * GB(0.46114) + 0.06 * NN DBN(0.47606) + 0.34 * XGB (0.44231) 0.42530
+0.18 * GARFIELD_1 (0.46976) + 0.09 * GB(0.46242) + 0.12 * NN LASAGNA 3(0.47092) + 0.07 * GB(0.45670) + 0.19 * CB RF(0.47096) + 0.27 * GB(0.46114) + 0.08 * NN DBN(0.47606) 0.42812
+0.18 * GARFIELD_1 (0.46976) + 0.09 * GB(0.46242) + 0.12 * NN LASAGNA 3(0.47092) + 0.07 * GB(0.45516) + 0.19 * CB RF(0.47096) + 0.27 * GB(0.46114) + 0.08 * NN DBN(0.47606) 0.42816
+0.18 * GARFIELD_1 (0.46976) + 0.08 * GB(0.46242) + 0.12 * NN LASAGNA 3(0.47092) + 0.08 * GB(0.45516) + 0.19 * CB RF(0.47096) + 0.27 * GB(0.46114) + 0.08 * NN DBN(0.47606) 0.42818
+0.22 * GARFIELD_1 (0.46976) + 0.09 * GB(0.46242) + 0.15 * NN LASAGNA 3(0.47092) + 0.08 * GB(0.45670) + 0.19 * CB RF(0.47096) + 0.27 * GB(0.46114) 0.42835
+0.22 * GARFIELD_1 (0.46976) + 0.22 * GB(0.46242) + 0.01 * GB(0.45771) + 0.15 * NN LASAGNA 3(0.47092) + 0.2 * GB(0.45670) + 0.2 * CB RF(0.47096) 0.42931
+0.23 * GARFIELD_1 (0.46976) + 0.24 * GB(0.46242) + 0.04 * GB(0.45771) + 0.16 * NN LASAGNA 3(0.47092) + 0.01 * GB(0.45719) + 0.19 * GB(0.45670) + 0.13 * CB RF(0.47987) 0.43041
+0.23 * GARFIELD_1 (0.46976) + 0.24 * GB(0.46242) + 0.04 * GB(0.45771) + 0.16 * NN LASAGNA 3(0.47092) + 0.01 * GB(0.45748) + 0.19 * GB(0.45670) + 0.13 * CB RF(0.47987) 0.43043
+0.24 * GARFIELD_1 (0.46976) + 0.29 * GB(0.46242) + 0.12 * GB(0.45771) + 0.16 * NN LASAGNA 3(0.47092) + 0.06 * GB(0.45719) + 0.13 * CB RF(0.47987) 0.43064
+0.24 * GARFIELD_1 (0.46976) + 0.29 * GB(0.46242) + 0.12 * GB(0.45771) + 0.16 * NN LASAGNA 3(0.47092) + 0.09 * GB(0.45719) + 0.1 * CB RF(0.47987) 0.43076
+0.45 * GB(0.46242) + 0.17 * NN LASAGNA 3(0.47092) + 0.13 * NN DBN(0.47606) + 0.13 * LASAGNA4_2(0.47541) + 0.12 * CB RF(0.48445) 0.43099
+0.15 * GB(0.46242) + 0.31 * GB(0.45771) + 0.17 * NN LASAGNA 3(0.47092) + 0.24 * NN DBN(0.47606) + 0.13 * CB RF(0.47987) 0.43114
+0.51 * GB(0.46242) + 0.15 * NN LASAGNA3(0.47092) + 0.17 * NN DBN(0.47682) + 0.14 * NN LASAGNA4(0.47674) + 0.03 * AB+RF(0.52698) 0.43241
+0.515 * GB(0.46242) + 0.25 * NN LASAGNA3(0.47092) + 0.2 * NN DBN(0.47682) + 0.035 * AB+RF(0.52698) 0.43250
+XGB 1200, 'max_depth': 20, 'eta': 0.04, 'colsample_bytree': 0.5, 'min_child_weight': 2, 'gamma': 0.88 0.43306
+0.04 * GB(0.46005) + 0.46 * GB(0.46242) + 0.27 * NN LASAGNA2(0.47729) + 0.19 * NN DBN(0.48104) + 0.04 * AB+RF(0.52698) 0.43345
+0.6 * GB(0.46242) + 0.2 * (LASAGNA 2 0.47729) + 0.2 * (DBN 0.47954) 0.43435
+0.52 * GB(0.46242) + 0.25 * (LASAGNA 2 0.47729) + 0.23 * (DBN 0.47954) 0.43441
+XGB 1000, 'max_depth': 15, 'eta': 0.04, 'colsample_bytree': 0.5, 'min_child_weight': 2, 'gamma': 0.8 0.43473
+0.58 * GB(0.46242) + 0.18 * (LASAGNA 2 0.47729) + 0.17 * (DBN 0.47954) + 0.07 * GB(0.46005) 0.43461
+0.6 * GB(0.46242) + 0.38 * LASAGNA 2(0.47729) + 0.02 * (AB n_estimators=15 (RF(n_estimators=400, max_features=25))) 0.43499
+0.6 * GB(0.46242) + 0.35 * NN DBN(0.47954) + 0.05 * (AB n_estimators=15 (RF(n_estimators=400, max_features=25))) 0.43531
+0.56 * Bag_GB(0.46640) + 0.33 * (NN DBN 0.47954) + 0.11 * AB_RF(0.52698) 0.43882
+0.55 * GB(0.46005) + 0.45 * LASAGNA2 (0.47729) 0.44040
+0.6 * (Bag on 10 GB, base, 200 estimators, max_depth=8, max features = 15) + 0.4 * (NN DBN 0.47954) 0.44042
+0.62 * GB(0.46005) + 0.32 * (NN DBN 0.47954) + 0.04 * (AB n_estimators=15 (RF(n_estimators=400, max_features=25))) 0.44055
+0.6 * (GB, base, 200 estimators, max_depth=8, max features = 15) + 0.4 * NN DBN(0.48104) 0.44064
+0.57 * GB(0.46005) + 0.34 * (NN DBN 0.47954) + 0.09 * (AB n_estimators=15 (RF(n_estimators=400, max_features=25))) 0.44070
+0.5 * (GB, base, 200 estimators, max_depth=8, max features = 15) + 0.5 * (NN DBN 0.48104) 0.44113
+XGB 800, 'max_depth': 10, 'eta': 0.04, 'colsample_bytree': 0.75, 'min_child_weight': 2, 'gamma': 0.25 0.44231
+XGB 800, 'max_depth': 9, 'eta': 0.04, 'colsample_bytree': 0.8, 'min_child_weight': 2, 'gamma': 0.15 0.44555
+GB, base, 700 estimators, max_depth=7, max_features = 20, learn_rate = 0.03 0.45516
+GB, base, 700 estimators, max_depth=7, max_features = 22, learn_rate = 0.03 0.45570
+0.5 * GB(0.46242) + 0.5 * GB(0.46005) 0.45579
+GB, base, 700 estimators, max_depth=7, max_features = 25, learn_rate = 0.03 0.45670
+GB, base, 800 estimators, max_depth=7, max_features = 23, learn_rate = 0.028 0.45682
+GB, base, 700 estimators, max_depth=7, max_features = 28, learn_rate = 0.03 0.45691
+GB, base, 600 estimators, max_depth=7, max_features = 25, learn_rate = 0.03 0.45719
+GB, base, 800 estimators, max_depth=7, max_features = 27, learn_rate = 0.028 0.45746
+GB, base, 600 estimators, max_depth=7, max_features = 20, learn_rate = 0.03 0.45748
+GB, base, 600 estimators, max_depth=7, max_features = 30, learn_rate = 0.03 0.45751
+GB, base, 500 estimators, max_depth=8, max features = 25, learn_rate = 0.03 0.45771
+GB, base, 600 estimators, max_depth=8, max_features = 25, learn_rate = 0.02 0.45829
+0.25 * (KITTY1 + KITTY3 + KITTY5 + KITTY6) KITTY_S1 0.45835
+GB, base, 500 estimators, max_depth=8, max_features = 26, learn_rate = 0.025 0.45841
+0.3333 * (KITTY1 + KITTY3 + KITTY4) 0.45877
+GB, base, 300 estimators, max_depth=8, max features = 20, learn_rate = 0.03 0.45982
+GB, base, 400 estimators, max_depth=8, max features = 20, learn_rate = 0.03 0.46005
+GB, base, 900 estimators, max_depth=7, max_features = 27, learn_rate = 0.03 0.46058
+GB, base, 600 estimators, max_depth=8, max_features = 25, learn_rate = 0.03 0.46114
+0.25 * (LASAGNA3 + LASAGNA8 + LASAGNA7 + LASAGNA5) - LAS_S1 0.46154
+0.2 * (LASAGNA3 + LASAGNA8 + LASAGNA7 + LASAGNA5 + LASAGNA11) 0.46171
+0.6 * (GB, base, 200 estimators, max_depth=8, max features = 15) + 0.4 * ((AB on max 20 RF (200 estimators, max_features = 20)) 0.46180
+GB, base, 350 estimators, max_depth=8, max features = 20, learn_rate = 0.05 0.46242
+0.33333 * (LASAGNA3 + LASAGNA7 + LASAGNA5) 0.46267
+0.25 * (LONGKATZEN_UNO + LONGKATZEN_DUO + LONGKATZEN_TRI + LONGKATZEN_555) – KATZ_S1 0.46282
+GB, base, 350 estimators, max_depth=8, max features = 25, learn_rate = 0.03 0.46307
+Bag on 5 GB, base, 700 estimators, max_depth=7, max_features = 25, learn_rate = 0.03 0.46327
+GB, base, 700 estimators, max_depth=6, max_features = 25, learn_rate = 0.028 0.46396
+KITTY3 0.46408 | kitty3
+0.3333 * (GARFIELD_1 + GARFIELD_2 + GARFIELD_3) – GARF_S1 0.46414
+KITTY2 0.46427
+KITTY1 0.46427 | kitty1
+GB, base, 600 estimators, max_depth=7, max_features = 25, learn_rate = 0.02 0.46624
+KITTY6 0.46639 | kitty6
+Bag on 10 GB, base, 350 estimators, max_depth=8, max features = 20, learn_rate = 0.05 0.46640
+FATGARFIELD_1 0.46748
+Bag on 10 GB, base, 200 estimators, max_depth=8, max features = 15 0.46787
+0.5 * (GB, base, 200 estimators, max_depth=8, max features = 15) + 0.5 * ((AB on max 20 RF (200 estimators, max_features = 20)) 0.46867
+KITTY4 0.46888
+0.5 * (GB, base, 200 estimators, max_depth=8, max features = 15) + 0.5 * (RF, base features, 200 estimators, max features = 20) 0.46889
+GB, base, 300 estimators, max_depth=8, max features = 20, learn_rate = 0.03 0.46911
+SIMGARFIELD1 0.46952
+GARFIELD_1 (1400 x 0.2 x 1400) 0.46976
+GARFIELD_2 0.46980 | nn_garf2
+CB RF(n_estimators=700, max_features=10) cv=7 0.46996
+LASAGNA3 0.47092 | las3
+CB RF(n_estimators=700, max_features=11), cv=5 0.47096
+CB RF(n_estimators=700, max_features=10) cv=6 0.47099
+KITTY5 0.47102 | kitty5
+LASAGNA8 0.47105
+CB RF(n_estimators=700, max_features=8), cv=5 0.47157
+LONGKATZEN_TRI 0.47205 | nn_katz1
+LASAGNA9 0.47224
+LASAGNA7 0.47280
+LONGKATZEN_UNO 0.47289
+LONGKATZEN_555 0.47330
+GB, base, 200 estimators, max_depth=8, max features = 15 0.47350
+LASAGNA11 0.47353
+LASAGNA5 0.47370
+GARFIELD_3 0.47381 | nn_garf3
+LASAGNA4_tmp3 0.47425
+LASAGNA4_tmp1 0.47444
+CB RF(n_estimators=600, max_features=15), cv=4 0.47449
+LONGKATZEN_444 0.47465
+LONGKATZEN_DUO 0.47513
+CB RF(n_estimators=600, max_features=17), cv=4 0.47533
+LASAGNA4_2 0.47541
+NN DBN([93, 700, 700, 9],  learn_rates=0.1, learn_rates_pretrain=0.11, learn_rate_decays=0.53, momentum=0.9, epochs=15) 0.47606
+LONGKATZEN_666 0.47622
+LASAGNA6 0.47659
+LASAGNA4 0.47674
+GB, base, 500 estimators, max_depth=8, max features = 20, learn_rate = 0.05 0.47674
+NN DBN([93, 600, 600, 9], learn_rates=0.098, learn_rates_pretrain=0.115, learn_rate_decays=0.52, momentum=0.9, epochs=15) 0.47682
+LASAGNA4_tmp2 0.47721
+LASAGNA2 0.47729
+NN DBN([93, 500, 500, 9], learn_rates=0.1, learn_rates_pretrain=0.11, learn_rate_decays=0.55, momentum=0.9, epochs=15) 0.47954
+CB RF(n_estimators=600, max_features=20) 0.47987 | cb_rf3
+GB base features, 200 estimators, max_depth=7 0.48060
+NN DBN([93, 450, 450, 9], learn_rates=0.1, learn_rates_pretrain=0.11, learn_rate_decays=0.55, momentum=0.9, epochs=15) 0.48104
+CB RF(n_estimators=700, max_features=22) 0.48124
+GB base features, 200 estimators, max_depth=7 0.48133
+CB RF 400 estimators, max_features=25, isotonic 0.48445
+0.6 * (GB base features, 150 estimators, max_depth=6) + 0.4 * (RF 150 estimators base features) 0.48673
+LONGKATZEN_777 0.49420
+GB base features, 150 estimators, max_depth=6 0.49705
+Bag on 5 GB, base, 350 estimators, max_depth=9, max features = 30, learn_rate = 0.05 0.50445
+AB on max 10 GB, base, 400 estimators, max_depth=8, max features = 20, learn_rate = 0.05 0.51381
+AB n_estimators=15 (RF(n_estimators=400, max_features=25)) 0.52698
+?? GB, 250 estimators, max_depth=9, max features = 20 0.53005 ?? Not sure what was in this submission
+AB on max 20 RF (200 estimators, max_features = 20) 0.53374
+RF, base features, 200 estimators, max features = 20 0.55300
+RF, base features, 200 estimators, max features = 15 0.55462
+LASAGNA10 0.55812
+AB on max 50 RF, base features, 150 estimators, 0.56016
+0.5 * RF(100) + 0.5 * GB(100) base 0.57139
+0.5015 * RF(100) + 0.4984660 * GB(100) base 0.57214
+RF 100 estimators 0.58979
+GB base features, 100 estimators 0.59342
+GB base features, 100 estimators, bad features = [4, 5, 11, 50, 64] 0.59346
+RF 50 estimators 0.65127
+LR, 0.66674
+LR, base features, C=0.5 0.66679
+AB on max 15 RF, base, n_estimators=500 max_features=20, min_samples_split=4 0.66985
+MAJVOTE 0.8 (0.42193) 0.73432
+LogReg on '2015-04-20_18:36:38.315215.csv', '2015-04-23_17:50:29.659338.csv', '2015-04-21_14:09:36.859853.csv', '2015-04-21_13:36:43.958840.csv' 0.89999
+GB, 200 estimators, max_depth=8, max features = 15, base + RandomForestClassifier(n_estimators=200, max_features=20) 1.15461
+RF, 1.49076
+RF on RF100 estimator (1/3) and GB100 estimator (2/3), trained on (3/3), 2.02362
+AB base features, 100 estimators 2.08642
+RF on RF100 estimator (1/2) and GB100 estimator (2/2), trained on all set, 2.42069
+SVM, 7.15267
