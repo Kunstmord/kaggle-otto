@@ -26,7 +26,7 @@ And here's a list of best results (on the public leaderboard) obtained using sin
     #. Calibrated Random Forest 0.46996 (Random Forest settings: n_estimators=700, max_features=10; CalibratedClassifierCV settings: method='isotonic', cv=7)
     #. nolearn+Lasagne neural net 0.46408
     #. Gradient Boosting Classifier (700 estimators, max_depth=7, max_features = 20, learn_rate = 0.03) 0.45516
-    #. XGBoost 0.43306 ('max_depth': 20, 'eta': 0.04, 'colsample_bytree': 0.5, 'min_child_weight': 2, 'gamma': 0.88 )
+    #. XGBoost ('max_depth': 20, 'eta': 0.04, 'colsample_bytree': 0.5, 'min_child_weight': 2, 'gamma': 0.88) 0.43306
 
 To find the best weights for mixing, I did 3-fold cross-validation using a fixed random seed (so that the train/test sets would always be the same) for the models I wanted to try out, and saved the results.
 Then I loaded the results I wanted to try out and just checked all possible combinations of weights (first, with a large step of 0.05, then with a small step of 0.01 to refined the results).
