@@ -28,54 +28,54 @@ XGB 1000, 'max_depth': 15, 'eta': 0.04, 'colsample_bytree': 0.5, 'min_child_weig
 0.6 * GB(0.46242) + 0.35 * NN DBN(0.47954) + 0.05 * (AB n_estimators=15 (RF(n_estimators=400, max_features=25))) 0.43531
 0.56 * Bag_GB(0.46640) + 0.33 * (NN DBN 0.47954) + 0.11 * AB_RF(0.52698) 0.43882
 0.55 * GB(0.46005) + 0.45 * LASAGNA2 (0.47729) 0.44040
-0.6 * (Bag on 10 GB, base, 200 estimators, max_depth=8, max features = 15) + 0.4 * (NN DBN 0.47954) 0.44042
+0.6 * (Bag on 10 GB, 200 estimators, max_depth=8, max features = 15) + 0.4 * (NN DBN 0.47954) 0.44042
 0.62 * GB(0.46005) + 0.32 * (NN DBN 0.47954) + 0.04 * (AB n_estimators=15 (RF(n_estimators=400, max_features=25))) 0.44055
-0.6 * (GB, base, 200 estimators, max_depth=8, max features = 15) + 0.4 * NN DBN(0.48104) 0.44064
+0.6 * (GB, 200 estimators, max_depth=8, max features = 15) + 0.4 * NN DBN(0.48104) 0.44064
 0.57 * GB(0.46005) + 0.34 * (NN DBN 0.47954) + 0.09 * (AB n_estimators=15 (RF(n_estimators=400, max_features=25))) 0.44070
-0.5 * (GB, base, 200 estimators, max_depth=8, max features = 15) + 0.5 * (NN DBN 0.48104) 0.44113
+0.5 * (GB, 200 estimators, max_depth=8, max features = 15) + 0.5 * (NN DBN 0.48104) 0.44113
 XGB 800, 'max_depth': 10, 'eta': 0.04, 'colsample_bytree': 0.75, 'min_child_weight': 2, 'gamma': 0.25 0.44231
 XGB 800, 'max_depth': 9, 'eta': 0.04, 'colsample_bytree': 0.8, 'min_child_weight': 2, 'gamma': 0.15 0.44555
-GB, base, 700 estimators, max_depth=7, max_features = 20, learn_rate = 0.03 0.45516
-GB, base, 700 estimators, max_depth=7, max_features = 22, learn_rate = 0.03 0.45570
+GB, 700 estimators, max_depth=7, max_features = 20, learn_rate = 0.03 0.45516
+GB, 700 estimators, max_depth=7, max_features = 22, learn_rate = 0.03 0.45570
 0.5 * GB(0.46242) + 0.5 * GB(0.46005) 0.45579
-GB, base, 700 estimators, max_depth=7, max_features = 25, learn_rate = 0.03 0.45670
-GB, base, 800 estimators, max_depth=7, max_features = 23, learn_rate = 0.028 0.45682
-GB, base, 700 estimators, max_depth=7, max_features = 28, learn_rate = 0.03 0.45691
-GB, base, 600 estimators, max_depth=7, max_features = 25, learn_rate = 0.03 0.45719
-GB, base, 800 estimators, max_depth=7, max_features = 27, learn_rate = 0.028 0.45746
-GB, base, 600 estimators, max_depth=7, max_features = 20, learn_rate = 0.03 0.45748
-GB, base, 600 estimators, max_depth=7, max_features = 30, learn_rate = 0.03 0.45751
-GB, base, 500 estimators, max_depth=8, max features = 25, learn_rate = 0.03 0.45771
-GB, base, 600 estimators, max_depth=8, max_features = 25, learn_rate = 0.02 0.45829
+GB, 700 estimators, max_depth=7, max_features = 25, learn_rate = 0.03 0.45670
+GB, 800 estimators, max_depth=7, max_features = 23, learn_rate = 0.028 0.45682
+GB, 700 estimators, max_depth=7, max_features = 28, learn_rate = 0.03 0.45691
+GB, 600 estimators, max_depth=7, max_features = 25, learn_rate = 0.03 0.45719
+GB, 800 estimators, max_depth=7, max_features = 27, learn_rate = 0.028 0.45746
+GB, 600 estimators, max_depth=7, max_features = 20, learn_rate = 0.03 0.45748
+GB, 600 estimators, max_depth=7, max_features = 30, learn_rate = 0.03 0.45751
+GB, 500 estimators, max_depth=8, max features = 25, learn_rate = 0.03 0.45771
+GB, 600 estimators, max_depth=8, max_features = 25, learn_rate = 0.02 0.45829
 0.25 * (KITTY1 + KITTY3 + KITTY5 + KITTY6) KITTY_S1 0.45835
-GB, base, 500 estimators, max_depth=8, max_features = 26, learn_rate = 0.025 0.45841
+GB, 500 estimators, max_depth=8, max_features = 26, learn_rate = 0.025 0.45841
 0.3333 * (KITTY1 + KITTY3 + KITTY4) 0.45877
-GB, base, 300 estimators, max_depth=8, max features = 20, learn_rate = 0.03 0.45982
-GB, base, 400 estimators, max_depth=8, max features = 20, learn_rate = 0.03 0.46005
-GB, base, 900 estimators, max_depth=7, max_features = 27, learn_rate = 0.03 0.46058
-GB, base, 600 estimators, max_depth=8, max_features = 25, learn_rate = 0.03 0.46114
+GB, 300 estimators, max_depth=8, max features = 20, learn_rate = 0.03 0.45982
+GB, 400 estimators, max_depth=8, max features = 20, learn_rate = 0.03 0.46005
+GB, 900 estimators, max_depth=7, max_features = 27, learn_rate = 0.03 0.46058
+GB, 600 estimators, max_depth=8, max_features = 25, learn_rate = 0.03 0.46114
 0.25 * (LASAGNA3 + LASAGNA8 + LASAGNA7 + LASAGNA5) - LAS_S1 0.46154
 0.2 * (LASAGNA3 + LASAGNA8 + LASAGNA7 + LASAGNA5 + LASAGNA11) 0.46171
-0.6 * (GB, base, 200 estimators, max_depth=8, max features = 15) + 0.4 * ((AB on max 20 RF (200 estimators, max_features = 20)) 0.46180
-GB, base, 350 estimators, max_depth=8, max features = 20, learn_rate = 0.05 0.46242
+0.6 * (GB, 200 estimators, max_depth=8, max features = 15) + 0.4 * ((AB on max 20 RF (200 estimators, max_features = 20)) 0.46180
+GB, 350 estimators, max_depth=8, max features = 20, learn_rate = 0.05 0.46242
 0.33333 * (LASAGNA3 + LASAGNA7 + LASAGNA5) 0.46267
 0.25 * (LONGKATZEN_UNO + LONGKATZEN_DUO + LONGKATZEN_TRI + LONGKATZEN_555) – KATZ_S1 0.46282
-GB, base, 350 estimators, max_depth=8, max features = 25, learn_rate = 0.03 0.46307
-Bag on 5 GB, base, 700 estimators, max_depth=7, max_features = 25, learn_rate = 0.03 0.46327
-GB, base, 700 estimators, max_depth=6, max_features = 25, learn_rate = 0.028 0.46396
+GB, 350 estimators, max_depth=8, max features = 25, learn_rate = 0.03 0.46307
+Bag on 5 GB, 700 estimators, max_depth=7, max_features = 25, learn_rate = 0.03 0.46327
+GB, 700 estimators, max_depth=6, max_features = 25, learn_rate = 0.028 0.46396
 KITTY3 0.46408 | kitty3
 0.3333 * (GARFIELD_1 + GARFIELD_2 + GARFIELD_3) – GARF_S1 0.46414
 KITTY2 0.46427
 KITTY1 0.46427 | kitty1
-GB, base, 600 estimators, max_depth=7, max_features = 25, learn_rate = 0.02 0.46624
+GB, 600 estimators, max_depth=7, max_features = 25, learn_rate = 0.02 0.46624
 KITTY6 0.46639 | kitty6
-Bag on 10 GB, base, 350 estimators, max_depth=8, max features = 20, learn_rate = 0.05 0.46640
+Bag on 10 GB, 350 estimators, max_depth=8, max features = 20, learn_rate = 0.05 0.46640
 FATGARFIELD_1 0.46748
-Bag on 10 GB, base, 200 estimators, max_depth=8, max features = 15 0.46787
-0.5 * (GB, base, 200 estimators, max_depth=8, max features = 15) + 0.5 * ((AB on max 20 RF (200 estimators, max_features = 20)) 0.46867
+Bag on 10 GB, 200 estimators, max_depth=8, max features = 15 0.46787
+0.5 * (GB, 200 estimators, max_depth=8, max features = 15) + 0.5 * ((AB on max 20 RF (200 estimators, max_features = 20)) 0.46867
 KITTY4 0.46888
-0.5 * (GB, base, 200 estimators, max_depth=8, max features = 15) + 0.5 * (RF, base features, 200 estimators, max features = 20) 0.46889
-GB, base, 300 estimators, max_depth=8, max features = 20, learn_rate = 0.03 0.46911
+0.5 * (GB, 200 estimators, max_depth=8, max features = 15) + 0.5 * (RF, base features, 200 estimators, max features = 20) 0.46889
+GB, 300 estimators, max_depth=8, max features = 20, learn_rate = 0.03 0.46911
 SIMGARFIELD1 0.46952
 GARFIELD_1 (1400 x 0.2 x 1400) 0.46976
 GARFIELD_2 0.46980 | nn_garf2
@@ -91,7 +91,7 @@ LASAGNA9 0.47224
 LASAGNA7 0.47280
 LONGKATZEN_UNO 0.47289
 LONGKATZEN_555 0.47330
-GB, base, 200 estimators, max_depth=8, max features = 15 0.47350
+GB, 200 estimators, max_depth=8, max features = 15 0.47350
 LASAGNA11 0.47353
 LASAGNA5 0.47370
 GARFIELD_3 0.47381 | nn_garf3
@@ -106,7 +106,7 @@ NN DBN([93, 700, 700, 9],  learn_rates=0.1, learn_rates_pretrain=0.11, learn_rat
 LONGKATZEN_666 0.47622
 LASAGNA6 0.47659
 LASAGNA4 0.47674
-GB, base, 500 estimators, max_depth=8, max features = 20, learn_rate = 0.05 0.47674
+GB, 500 estimators, max_depth=8, max features = 20, learn_rate = 0.05 0.47674
 NN DBN([93, 600, 600, 9], learn_rates=0.098, learn_rates_pretrain=0.115, learn_rate_decays=0.52, momentum=0.9, epochs=15) 0.47682
 LASAGNA4_tmp2 0.47721
 LASAGNA2 0.47729
@@ -120,8 +120,8 @@ CB RF 400 estimators, max_features=25, isotonic 0.48445
 0.6 * (GB base features, 150 estimators, max_depth=6) + 0.4 * (RF 150 estimators base features) 0.48673
 LONGKATZEN_777 0.49420
 GB base features, 150 estimators, max_depth=6 0.49705
-Bag on 5 GB, base, 350 estimators, max_depth=9, max features = 30, learn_rate = 0.05 0.50445
-AB on max 10 GB, base, 400 estimators, max_depth=8, max features = 20, learn_rate = 0.05 0.51381
+Bag on 5 GB, 350 estimators, max_depth=9, max features = 30, learn_rate = 0.05 0.50445
+AB on max 10 GB, 400 estimators, max_depth=8, max features = 20, learn_rate = 0.05 0.51381
 AB n_estimators=15 (RF(n_estimators=400, max_features=25)) 0.52698
 ?? GB, 250 estimators, max_depth=9, max features = 20 0.53005 ?? Not sure what was in this submission
 AB on max 20 RF (200 estimators, max_features = 20) 0.53374
@@ -137,7 +137,7 @@ GB base features, 100 estimators, bad features = [4, 5, 11, 50, 64] 0.59346
 RF 50 estimators 0.65127
 LR, 0.66674
 LR, base features, C=0.5 0.66679
-AB on max 15 RF, base, n_estimators=500 max_features=20, min_samples_split=4 0.66985
+AB on max 15 RF, n_estimators=500 max_features=20, min_samples_split=4 0.66985
 MAJVOTE 0.8 (0.42193) 0.73432
 LogReg on '2015-04-20_18:36:38.315215.csv', '2015-04-23_17:50:29.659338.csv', '2015-04-21_14:09:36.859853.csv', '2015-04-21_13:36:43.958840.csv' 0.89999
 GB, 200 estimators, max_depth=8, max features = 15, base + RandomForestClassifier(n_estimators=200, max_features=20) 1.15461
